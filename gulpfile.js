@@ -3,7 +3,7 @@
 
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
-var sass = require("gulp-sass");
+var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var mqpacker = require("css-mqpacker");
@@ -20,9 +20,9 @@ var del = require("del");
 
 
 gulp.task("style", function() {
-  gulp.src("src/sass/style.scss")
+  gulp.src("src/less/style.scss")
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(less())
     .pipe(postcss([                                                 // делаем постпроцессинг
       autoprefixer({ browsers: ["last 2 version", "IE 11"] }),     // автопрефиксирование
       mqpacker({ sort: true })                                     // объединение медиавыражений
@@ -111,7 +111,7 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("src/sass/**/*.scss", ["style"]);
+  gulp.watch("src/less/**/*.scss", ["style"]);
   gulp.watch("src/js/**/*.js", ["minjs"]);
   gulp.watch("src/*.html", ["html"]).on("change", server.reload);
 });

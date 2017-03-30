@@ -1,0 +1,33 @@
+.clearfix {
+  &::after {
+    display: table;
+    clear: both;
+
+    content: "";
+  }
+
+  &::before {
+    display: table;
+
+    content: "";
+  }
+}
+.container {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  @media @{$big-mobile} {
+    width: 480px;
+  }
+  @media @{$tablet} {
+    width: 768px;
+  }
+  @media @{$desktop} {
+    width: 960px;
+  }
+
+  @media @{$big-desktop} {
+    width: 1175px;
+    max-width: 1175px;
+  }
+}
