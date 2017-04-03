@@ -1,35 +1,13 @@
-.clearfix {
-  &::after {
-    display: table;
-    clear: both;
+.visually-hidden {
+  position: absolute;
 
-    content: "";
-  }
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 
-  &::before {
-    display: table;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
 
-    content: "";
-  }
-}
-.container {
-  box-sizing: border-box;
-  min-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  @media @mobile-big {
-    min-width: 480px;
-  }
-  @media @tablet {
-    min-width: 768px;
-  }
-  @media @tablet-big {
-    min-width: 960px;
-  }
-  @media @desktop {
-    min-width: 1200px;
-  }
-  @media @desktop-big {
-    min-width: 1440px;
-  }
+  border: 0;
 }
