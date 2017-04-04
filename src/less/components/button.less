@@ -10,13 +10,9 @@
     justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
-    width: 200px;
-    height: 44px;
     border: 2px solid;
 
     font-family: @font-family-primary;
-    font-size: 17.64px;
-    line-height: 18.5px;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
@@ -25,7 +21,29 @@
     background-color: transparent;
     transition: all 0.15s linear;
     cursor: pointer;
+
+  // --------------TEMP-----------------
+
+    width: 200px;
+    height: 44px;
   }
+
+  //---------------FONT-SIZE-----------------
+
+  &.-big {
+    font-size: 17.64px;
+    line-height: 18.5px;
+  }
+  &.-medium {
+    font-size: 14px;
+    line-height: 15.5px;
+  }
+  &.-small {
+    font-size: 11.45px;
+    line-height: 12.68px;
+  }
+
+  // --------------COLOR----------------
 
   &.-black {
     color: @primary-color;
@@ -36,6 +54,7 @@
       color: @secondary-color;
     }
   }
+
   &.-white {
     color: @secondary-color;
     border-color: @secondary-color;
@@ -45,6 +64,7 @@
       color: @primary-color;
     }
   }
+
   &.-cyan {
     color: @tertiary-color;
     border-color: @tertiary-color;
@@ -54,11 +74,9 @@
       color: @secondary-color;
     }
   }
-  &.-formbutton {
-    height: 100%;
-    font-size: 14px;
-    line-height: 15.5px;
-  }
+
+  // --------------OTHER----------------
+
   &.-social {
     border: none;
 
