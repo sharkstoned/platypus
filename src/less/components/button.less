@@ -1,52 +1,56 @@
-@font-family: @font-family-superGrotesk;
+@font-family-primary: @font-family-superGrotesk;
+@font-family-secondary: @font-family-proximaNova;
 
+@social-grey-light: @grey-light;
+@social-grey-dark: @grey-dark;
 
-
-.page-button {
+.button {
   & {
-    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     box-sizing: border-box;
-    padding-top: 0.96em;
-    padding-bottom: 0.96em;
-    border: 2px solid currentColor;
+    width: 200px;
+    height: 44px;
+    border: 2px solid;
 
-    font-family: @font-family;
+    font-family: @font-family-primary;
     font-size: 17.64px;
-    line-height: 19.53px;
+    line-height: 18.5px;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
 
     background-color: transparent;
-
+    transition: all 0.15s linear;
     cursor: pointer;
   }
 
   &.-black {
     color: @primary-color;
+    border-color: @primary-color;
 
     &:hover {
       background-color: @primary-color;
-      border-color: @primary-color;
       color: @secondary-color;
     }
   }
   &.-white {
     color: @secondary-color;
+    border-color: @secondary-color;
 
     &:hover {
       background-color: @secondary-color;
-      border-color: @secondary-color;
       color: @primary-color;
     }
   }
   &.-cyan {
     color: @tertiary-color;
+    border-color: @tertiary-color;
 
     &:hover {
       background-color: @tertiary-color;
-      border-color: @tertiary-color;
       color: @secondary-color;
     }
   }
@@ -55,7 +59,28 @@
     font-size: 14px;
     line-height: 15.5px;
   }
+  &.-social {
+    border: none;
 
+    font-family: @font-family-secondary;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+
+    background-color: @social-grey-dark;
+    color: @secondary-color;
+
+    &:hover {
+      background-color: @social-grey-light;
+      color: @primary-color;
+    }
+
+    > .icon {
+      margin-left: auto;
+    }
+    > .text {
+      padding-left: 14px;
+      margin-right: auto;
+    }
+  }
 }
-
-// переписать вариаторы в разметке (на цвета)
