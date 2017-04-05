@@ -1,9 +1,9 @@
-@font-family-primary: @font-family-superGrotesk;
-@font-family-secondary: @font-family-proximaNova;
+@link-primary-font-family: @font-family-superGrotesk;
+@link-secondary-font-family: @font-family-proximaNova;
 
 .link {
   & {
-    font-family: @font-family-primary;
+    font-family: @link-primary-font-family;
     font-size: 13px;
     line-height: 15.5px;
     font-weight: 400;
@@ -89,9 +89,20 @@
   &.-instagram {
     color: @black;
   }
+  &.-storeinfo {
+    color: @white;
+
+    &:hover {
+      color: @cyan;
+    }
+  }
   &.-customer {
-    font-family: @font-family-secondary;
+    font-family: @link-secondary-font-family;
     font-weight: 400;
     color: @white;
+
+    &:hover {
+      color: @cyan;
+    }
   }
 }
