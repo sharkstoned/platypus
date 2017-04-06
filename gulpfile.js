@@ -11,11 +11,27 @@ var imagemin = require('gulp-imagemin');
 var rename = require('gulp-rename');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
+var svg2string = require('gulp-svg2string');
 var server = require('browser-sync').create();
 var run = require('run-sequence');
 var ghPages = require('gulp-gh-pages');
 var uglify = require('gulp-uglify');
 var del = require('del');
+var spriteGen = require('sprity');
+var Glob = require('glob').Glob;
+
+// -----------HELPERS-------------
+
+var reload = () => {
+    setTimeout(server.reload, 50);
+};
+var makeList = (...paths) => {
+    if (paths) {
+        paths.forEach((item) => {
+
+        });
+    }
+};
 
 gulp.task('style', function () {
     gulp.src('src/less/style.less')
@@ -50,28 +66,36 @@ gulp.task('html', function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src('build/img/**/*.{jpg, png, gif}')
+    return gulp.src('build/images/**/*.{jpg, png, gif}')
     .pipe(imagemin([
         imagemin.optipng({optimizationLevel: 3}),
         imagemin.jpegtran({progressive: true})
     ]))
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest('build/images'));
 });
 
-gulp.task('symbols', function () {
-    return gulp.src('build/img/icons/*.svg')
-  .pipe(svgmin())
-  .pipe(svgstore({
-      inlineSvg: true
-  }))
-  .pipe(rename('symbols.svg'))
-  .pipe(gulp.dest('build/img'));
+gulp.task('img-sprite', function () {
+    // return spriteGen.src(glob('src/images/brands/*.{png,jpg}'));
+   var mg = new Glob('src/images/brands/*.png', {mark: true}, function (er, matches) {
+        console.log("matches", matches)
+    });
+});
+
+gulp.task('svg-sprite', function () {
+    return gulp.src('src/images/icons/**/*.svg')
+                .pipe(svgmin())
+                .pipe(svgstore({
+                    inlineSvg: true
+                }))
+                .pipe(svg2string())
+                .pipe(rename('svg-sprite.js'))
+                .pipe(gulp.dest('src/js/'));
 });
 
 gulp.task('copy', function () {
     return gulp.src([
         'src/fonts/**/*.{woff,woff2}',
-        'src/img/**',
+        'src/images/**',
         'src/js/**',
         'src/*.html'
     ], {
@@ -96,14 +120,10 @@ gulp.task('build', function (fn) {
     'style',
     'minjs',
     'images',
-    'symbols',
+    'svg-sprite',
     fn
   );
 });
-
-var reload = () => {
-    setTimeout(server.reload, 50);
-};
 
 gulp.task('serve', function () {
     server.init({
@@ -114,8 +134,7 @@ gulp.task('serve', function () {
     });
 
     gulp.watch('src/less/**/*.less', ['style']).on('change', reload);
-    gulp.watch('src/img/**/*.{jpg,png,gif}', ['images']);
-    gulp.watch('src/img/icons/*.svg', ['symbols']);
+    gulp.watch('src/images/**/*.{jpg,png,gif}', ['images']);
     gulp.watch('src/js/**/*.js', ['minjs']);
     gulp.watch('src/*.html', ['html']).on('change', reload);
 });

@@ -16,6 +16,7 @@
     "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.1.1",
+    "glob": "^7.1.1",
     "gulp": "^3.9.1",
     "gulp-csscomb": "^3.0.8",
     "gulp-csso": "^2.0.0",
@@ -30,7 +31,8 @@
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^2.0.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "sprity": "^1.0.8"
   },
   "scripts": {
     "build": "gulp build",
