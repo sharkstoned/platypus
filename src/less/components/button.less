@@ -1,8 +1,12 @@
 @btn-primary-font-family: @font-family-superGrotesk;
 @btn-secondary-font-family: @font-family-proximaNova;
 
-@social-grey-light: @grey-light;
-@social-grey-dark: @grey-dark;
+@btn-primary-color: @black;
+@btn-secondary-color: @white;
+@btn-tertiary-color: @cyan;
+
+@btn-grey-light: #e6e6e6;
+@btn-grey-dark: #1a1a1a;
 
 .button {
   & {
@@ -46,32 +50,32 @@
   // --------------COLOR----------------
 
   &.-black {
-    color: @primary-color;
-    border-color: @primary-color;
+    color: @btn-primary-color;
+    border-color: @btn-primary-color;
 
     &:hover {
-      background-color: @primary-color;
-      color: @secondary-color;
+      background-color: @btn-primary-color;
+      color: @btn-secondary-color;
     }
   }
 
   &.-white {
-    color: @secondary-color;
-    border-color: @secondary-color;
+    color: @btn-secondary-color;
+    border-color: @btn-secondary-color;
 
     &:hover {
-      background-color: @secondary-color;
-      color: @primary-color;
+      background-color: @btn-secondary-color;
+      color: @btn-primary-color;
     }
   }
 
   &.-cyan {
-    color: @tertiary-color;
-    border-color: @tertiary-color;
+    color: @btn-tertiary-color;
+    border-color: @btn-tertiary-color;
 
     &:hover {
-      background-color: @tertiary-color;
-      color: @secondary-color;
+      background-color: @btn-tertiary-color;
+      color: @btn-secondary-color;
     }
   }
 
@@ -85,12 +89,12 @@
     line-height: 22px;
     font-weight: 400;
 
-    background-color: @social-grey-dark;
-    color: @secondary-color;
+    background-color: @btn-grey-dark;
+    color: @btn-secondary-color;
 
     &:hover {
-      background-color: @social-grey-light;
-      color: @primary-color;
+      background-color: @btn-grey-light;
+      color: @btn-primary-color;
     }
   }
 }

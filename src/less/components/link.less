@@ -1,6 +1,12 @@
 @link-primary-font-family: @font-family-superGrotesk;
 @link-secondary-font-family: @font-family-proximaNova;
 
+@link-primary-color: @black;
+@link-secondary-color: @white;
+@link-tertiary-color: @cyan;
+
+@link-primary-color-transparent: rgba(255,255,255,0.3);
+
 .link {
   & {
     font-family: @link-primary-font-family;
@@ -13,12 +19,12 @@
   }
   // -----------FONT-SIZE------------
   &.-regular {
-    color: @black;
+    color: @link-primary-color;
     font-weight: 700;
     text-transform: uppercase;
 
     &:hover {
-      color: @cyan;
+      color: @link-tertiary-color;
     }
   }
   &.-big {
@@ -35,7 +41,7 @@
   }
 
   &.-user {
-    color: @white;
+    color: @link-secondary-color;
     > .number {
       font-weight: 700;
     }
@@ -49,13 +55,13 @@
     text-transform: uppercase;
 
     &:hover {
-      background-color: @cyan;
+      background-color: @link-tertiary-color;
     }
     // ------------TEMP--------------
     width: 150px;
     height: 80px;
     > .icon {
-      border-color: @white;
+      border-color: @link-secondary-color;
     }
     //
   }
@@ -67,7 +73,7 @@
     background-color: transparent;
 
     &:hover {
-      background-color: @grey-dark;
+      background-color: @link-primary-color-transparent;
     }
     // ------------TEMP--------------
     width: 150px;
@@ -83,26 +89,26 @@
     text-decoration: underline;
 
     &:hover {
-      color: @white;
+      color: @link-secondary-color;
     }
   }
   &.-instagram {
-    color: @black;
+    color: @link-primary-color;
   }
   &.-storeinfo {
-    color: @white;
+    color: @link-secondary-color;
 
     &:hover {
-      color: @cyan;
+      color: @link-tertiary-color;
     }
   }
   &.-customer {
     font-family: @link-secondary-font-family;
     font-weight: 400;
-    color: @white;
+    color: @link-secondary-color;
 
     &:hover {
-      color: @cyan;
+      color: @link-tertiary-color;
     }
   }
 }
