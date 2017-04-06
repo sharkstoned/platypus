@@ -1,4 +1,9 @@
 @title-primary-font-family: @font-family-superGrotesk;
+@title-secondary-font-family: @font-family-brainFlower;
+
+@title-primary-color: @black;
+@title-secondary-color: @white;
+@title-tertiary-color: @cyan;
 
 .title {
   & {
@@ -33,12 +38,27 @@
   //--------------COLOR---------------
 
   &.-black {
-    color: @black;
+    color: @title-primary-color;
   }
   &.-white {
-    color: @white;
+    color: @title-secondary-color;
   }
   &.-cyan {
-    color: @cyan;
+    color: @title-tertiary-color;
+  }
+
+  //------------OTHER---------------
+
+  &.-feature {
+    font-family: @title-secondary-font-family;
+    color: @title-tertiary-color;
+    font-size: 32px;
+    line-height: 36.93px;
+  }
+  &.-social {
+    font-family: @title-secondary-font-family;
+    color: @title-secondary-color;
+    font-size: 49.55px;
+    line-height: 12.8px;
   }
 }
