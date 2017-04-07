@@ -25,13 +25,7 @@ var Glob = require('glob').Glob;
 var reload = () => {
     setTimeout(server.reload, 50);
 };
-var makeList = (...paths) => {
-    if (paths) {
-        paths.forEach((item) => {
-
-        });
-    }
-};
+//
 
 gulp.task('style', function () {
     gulp.src('src/less/style.less')
@@ -74,12 +68,12 @@ gulp.task('images', function () {
   .pipe(gulp.dest('build/images'));
 });
 
-gulp.task('img-sprite', function () {
-    // return spriteGen.src(glob('src/images/brands/*.{png,jpg}'));
-   var mg = new Glob('src/images/brands/*.png', {mark: true}, function (er, matches) {
-        console.log("matches", matches)
-    });
-});
+// gulp.task('img-sprite', function () {
+//     return spriteGen.src({
+//         src: 'src/images/brands/*'
+//         style: 'src/images/sprite.css'
+//     })
+// });
 
 gulp.task('svg-sprite', function () {
     return gulp.src('src/images/icons/**/*.svg')
@@ -120,7 +114,6 @@ gulp.task('build', function (fn) {
     'style',
     'minjs',
     'images',
-    'svg-sprite',
     fn
   );
 });

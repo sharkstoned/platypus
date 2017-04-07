@@ -3,9 +3,10 @@
 @svg-secondary-color: @cyan;
 @svg-tertiary-color: @black;
 
+@svg-forth-color: #808080;
+
 .icon {
   //------------TEMP--------------
-  border: 1px solid #000;
   box-sizing: border-box;
   width: 22px;
   height: 22px;
@@ -17,20 +18,17 @@
 //  ------------COLOR-------------
   &.-white {
     fill: @svg-primary-color;
-    // -----TEMP------
-    background-color: #000;
-    //
   }
   &.-black {
     fill: @svg-tertiary-color;
   }
   &.-cyan {
     fill: @svg-secondary-color;
-    // -----TEMP------
-    background-color: #000;
-    //
   }
 //  ----------OTHER-------------
+  &.-search {
+    fill: @svg-forth-color;
+  }
   &.-nav {
     width: 25px;
     height: 25px;

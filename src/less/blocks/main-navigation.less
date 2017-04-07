@@ -1,0 +1,45 @@
+.main-navigation {
+  display: none;
+}
+
+@media @tablet-S {
+  .main-navigation {
+    & {
+      display: flex;
+      flex-grow:1;
+    }
+    > .link {
+      width: 25%;
+      height: 64px;
+    }
+    > .link > .icon {
+      margin-right: 10px;
+    }
+  }
+}
+@media @desktop-S {
+  .main-navigation {
+    & {
+      justify-content: flex-end;
+    }
+    > .link {
+      flex-direction: column;
+      width: 10%;
+      height: 100px;
+    }
+    > .link.-list {
+      display: none;
+    }
+    > .link > .text {
+      font-size: 10px;
+      line-height: 10px;
+    }
+    > .link > .text.-basket {
+      font-size: 0;
+    }
+    > .link > .icon {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

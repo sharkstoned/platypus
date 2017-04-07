@@ -1,0 +1,75 @@
+.menu-block {
+  & {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: @black;
+  }
+  > .link.-menu {
+    width: 64px;
+    height: 64px;
+  }
+  > .link.-menu > .icon {
+    margin-right: 10px;
+  }
+  > .link.-logo {
+    position: absolute;
+    box-sizing: content-box;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 18px;
+    z-index: 1;
+  }
+  > .link.-logo > .icon {
+    width: 108px;
+    height: 21px;
+  }
+  > .link > .text {
+    font-size: 0;
+  }
+}
+@media @mobile-L {
+  .menu-block {
+    > .link.-logo {
+      top: 13px;
+    }
+    > .link.-logo > .icon {
+      width: 130px;
+      height: 30px;
+    }
+  }
+}
+@media @tablet-S {
+  .menu-block {
+    & {
+      padding-top: 64px;
+    }
+    > .link.-logo {
+      top: 18px;
+    }
+
+    > .link.-menu {
+      width: 20%;
+    }
+    > .link > .text {
+      font-size: inherit;
+    }
+  }
+}
+@media @desktop-S {
+  .menu-block {
+    & {
+      padding-top: 0;
+    }
+    > .link.-logo > .icon {
+      width: 243px;
+      height: 48px;
+    }
+    > .link.-menu {
+      height: 100px;
+    }
+    > .link > .text.-menu {
+      font-size: 0;
+    }
+  }
+}
