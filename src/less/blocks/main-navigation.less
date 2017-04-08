@@ -1,5 +1,13 @@
 .main-navigation {
   display: none;
+
+  > .link.-basket {
+    background-color: @cyan;
+
+    &:hover {
+      background-color: #a0d6d4;
+    }
+  }
 }
 
 @media @tablet-S {
@@ -27,19 +35,39 @@
       width: 10%;
       height: 100px;
     }
-    > .link.-list {
-      display: none;
+    > .link.-basket > .icon {
+      margin-bottom: 0;
+      margin-right: 0;
     }
+    > .link.-basket > .text {
+      .visually-hidden;
+    }
+  }
+}
+@media @desktop-S and (max-width: 1439px) {
+  .main-navigation {
     > .link > .text {
       font-size: 10px;
       line-height: 10px;
     }
-    > .link > .text.-basket {
-      font-size: 0;
-    }
     > .link > .icon {
       margin-right: 0;
       margin-bottom: 10px;
+    }
+    > .link.-basket {
+      width: 100px;
+    }
+  }
+}
+@media @desktop-L {
+  .main-navigation {
+
+    > .link {
+      flex-direction: row;
+      width: 11%;
+    }
+    > .link.-basket {
+      width: 100px;
     }
   }
 }
