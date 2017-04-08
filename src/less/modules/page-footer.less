@@ -1,9 +1,12 @@
 @page-footer-primary-color: @primary-color;
 
 .page-footer {
-    display: flex;
-    flex-direction: column;
-    background-color: @page-footer-primary-color;
+    & {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        background-color: @page-footer-primary-color;
+    }
 
     > .customer-block {
         order: 3;

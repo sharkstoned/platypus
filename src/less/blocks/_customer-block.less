@@ -1,10 +1,12 @@
 .customer-block {
-
     > .navigation {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        max-width: 600px;
         height: 100px;
+        margin-left: auto;
+        margin-right: auto;
         align-content: space-around;
     }
     > .navigation > .link {
@@ -13,14 +15,21 @@
     > .payment {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 12px;
+    }
+    > .payment > .title {
+        margin-bottom: 10px;
     }
     > .payment > .wrapper {
         margin-bottom: 10px;
     }
-    > .payment > .text {
-        margin-bottom: 12px;
+    > .payment > .textwrapper  {
+        display: flex;
+        align-items: center;
     }
     > .text.-copyright {
         display: block;
@@ -28,11 +37,31 @@
         margin-left: auto;
         margin-right: auto;
     }
+    > .payment > .textwrapper > .text.-payment {
+        margin-right: 20px;
+    }
 }
 @media @mobile-L {
     .customer-block {
         > .navigation {
             height: 80px;
+        }
+        > .payment {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 78vw;
+        }
+        > .payment > .title {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+        > .payment > .wrapper {
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
+        > .payment > .text {
+            margin-right: 20px;
+            margin-bottom: 0;
         }
     }
 }

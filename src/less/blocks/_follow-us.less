@@ -1,0 +1,23 @@
+.follow-us {
+    & {
+        display: flex;
+        flex-direction: column;
+    }
+    > .title {
+        margin-bottom: 10px;
+    }
+    > .text {
+        margin-top: 0;
+    }
+}
+@media @tablet-S {
+    .follow-us {
+        & {
+            align-items: flex-start;
+        }
+        > .text {
+            width: 220px;
+            text-align: left;
+        }
+    }
+}
