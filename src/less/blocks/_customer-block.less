@@ -1,0 +1,38 @@
+.customer-block {
+
+    > .navigation {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100px;
+        align-content: space-around;
+    }
+    > .navigation > .link {
+        margin-bottom: 10px;
+    }
+    > .payment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    > .payment > .wrapper {
+        margin-bottom: 10px;
+    }
+    > .payment > .text {
+        margin-bottom: 12px;
+    }
+    > .text.-copyright {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media @mobile-L {
+    .customer-block {
+        > .navigation {
+            height: 80px;
+        }
+    }
+}

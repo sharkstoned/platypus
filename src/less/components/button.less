@@ -1,5 +1,5 @@
 @btn-primary-font-family: @font-family-superGrotesk;
-@btn-secondary-font-family: @font-family-proximaNova;
+@btn-secondary-font-family: @font-family-proximaNovaCond;
 
 @btn-primary-color: @black;
 @btn-secondary-color: @white;
@@ -9,90 +9,93 @@
 @btn-grey-dark: #1a1a1a;
 
 .button {
-  & {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-sizing: border-box;
-    border: 2px solid;
+    & {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-sizing: border-box;
+        border: 2px solid;
 
-    font-family: @btn-primary-font-family;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
+        font-family: @btn-primary-font-family;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
 
-    background-color: transparent;
-    transition: all 0.15s linear;
-    cursor: pointer;
-  }
-
-  //---------------FONT-SIZE-----------------
-
-  &.-big {
-    font-size: 17.64px;
-    line-height: 18.5px;
-  }
-  &.-medium {
-    font-size: 14px;
-    line-height: 15.5px;
-  }
-  &.-small {
-    font-size: 11.45px;
-    line-height: 12.68px;
-  }
-
-  // --------------COLOR----------------
-
-  &.-black {
-    color: @btn-primary-color;
-    border-color: @btn-primary-color;
-
-    &:hover {
-      background-color: @btn-primary-color;
-      color: @btn-secondary-color;
+        background-color: transparent;
+        transition: all 0.15s linear;
+        cursor: pointer;
     }
-  }
 
-  &.-white {
-    color: @btn-secondary-color;
-    border-color: @btn-secondary-color;
+    //---------------FONT-SIZE-----------------
 
-    &:hover {
-      background-color: @btn-secondary-color;
-      color: @btn-primary-color;
+    &.-big {
+        font-size: 17.64px;
+        line-height: 18.5px;
     }
-  }
-
-  &.-cyan {
-    color: @btn-tertiary-color;
-    border-color: @btn-tertiary-color;
-
-    &:hover {
-      background-color: @btn-tertiary-color;
-      color: @btn-secondary-color;
+    &.-medium {
+        font-size: 14px;
+        line-height: 15.5px;
     }
-  }
-
-  // --------------OTHER----------------
-
-  &.-social {
-    border: none;
-
-    font-family: @btn-secondary-font-family;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 400;
-
-    background-color: @btn-grey-dark;
-    color: @btn-secondary-color;
-
-    &:hover {
-      background-color: @btn-grey-light;
-      color: @btn-primary-color;
+    &.-small {
+        font-size: 11.45px;
+        line-height: 12.68px;
     }
-  }
-  &.-nostyle {
-    border: none;
-  }
+
+    // --------------COLOR----------------
+
+    &.-black {
+        color: @btn-primary-color;
+        border-color: @btn-primary-color;
+
+        &:hover {
+            background-color: @btn-primary-color;
+            color: @btn-secondary-color;
+        }
+    }
+
+    &.-white {
+        color: @btn-secondary-color;
+        border-color: @btn-secondary-color;
+
+        &:hover {
+            background-color: @btn-secondary-color;
+            color: @btn-primary-color;
+        }
+    }
+
+    &.-cyan {
+        color: @btn-tertiary-color;
+        border-color: @btn-tertiary-color;
+
+        &:hover {
+            background-color: @btn-tertiary-color;
+            color: @btn-secondary-color;
+        }
+    }
+
+    // --------------OTHER----------------
+
+    &.-social {
+        border: none;
+
+        font-family: @btn-secondary-font-family;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 300;
+
+        background-color: @btn-grey-dark;
+        color: @btn-secondary-color;
+
+        &:hover {
+            background-color: @btn-grey-light;
+            color: @btn-primary-color;
+        }
+        &:hover .icon.-socialbtn {
+            fill: @btn-primary-color
+        }
+    }
+    &.-nostyle {
+        border: none;
+    }
 }

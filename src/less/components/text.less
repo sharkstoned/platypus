@@ -8,92 +8,106 @@
 @text-tertiary-color: @cyan;
 
 .text {
-  & {
-    font-family: @text-primary-font-family;
-  }
+    & {
+        font-family: @text-primary-font-family;
+    }
 
-  // ----------FONT-SIZE-----------
-  &.-small {
-    font-family: @text-secondary-font-family;
-    font-size: 11px;
-    line-height: 18px;
-    font-weight: 400;
-    color: @text-primary-color;
-  }
+    // ----------FONT-SIZE-----------
+    &.-footersmall {
+        font-family: @text-secondary-font-family;
+        font-size: 11px;
+        line-height: 18px;
+        font-weight: 400;
+        color: @text-primary-color;
+    }
 
-  // ------------OTHER--------------
-  &.-nav {
-    font-family: @text-tertiary-font-family;
-    font-size: 13px;
-    line-height: 15.5px;
-    font-weight: 700;
-    color: @text-primary-color;
-    text-transform: uppercase;
-  }
-  &.-feature {
-    font-family: @text-tertiary-font-family;
-    color: @text-tertiary-color;
-    font-size: 12px;
-    line-height: 12px;
-    text-transform: uppercase;
-    // ----------TEMP-------------
-    background-color: @black;
-    //
-  }
-  &.-tip {
-    font-size: 12px;
-    line-height: 14.5px;
-    font-weight: 400;
-    color: @text-primary-color;
-    text-align: right;
-  }
-  &.-storeinfo {
-    font-family: @text-secondary-font-family;
-    font-size: 11px;
-    line-height: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-  &.-payment {
-    font-family: @text-tertiary-font-family;
-    font-size: 12px;
-    line-height: 11px;
-    font-weight: 700;
-    color: @text-primary-color;
-    text-transform: uppercase;
-  }
-  &.-copyright {
-    font-family: @text-secondary-font-family;
-    font-size: 10px;
-    line-height: 18px;
-    font-weight: 400;
-    color: @text-primary-color;
-  }
-  &.-social {
-    font-family: @text-primary-font-family;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 300;
-  }
-  &.-product {
-    font-family: @text-primary-font-family;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
-  &.-productM {
-    font-family: @text-primary-font-family;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 15.5px;
-    text-transform: uppercase;
-  }
-  &.-productS {
-    font-family: @text-primary-font-family;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15.5px;
-    text-transform: uppercase;
-  }
+    // ------------OTHER--------------
+    &.-nav {
+        font-family: @text-tertiary-font-family;
+        font-size: 13px;
+        line-height: 15.5px;
+        font-weight: 700;
+        color: @text-primary-color;
+        text-transform: uppercase;
+    }
+    &.-feature {
+        font-family: @text-tertiary-font-family;
+        color: @text-tertiary-color;
+        font-size: 12px;
+        line-height: 12px;
+        text-transform: uppercase;
+        // ----------TEMP-------------
+        background-color: @black;
+        //
+    }
+    &.-tip {
+        font-size: 12px;
+        line-height: 14.5px;
+        font-weight: 400;
+        color: @text-primary-color;
+        text-align: right;
+    }
+    &.-storeinfo {
+        font-family: @text-secondary-font-family;
+        font-size: 11px;
+        line-height: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    &.-payment {
+        font-family: @text-tertiary-font-family;
+        font-size: 12px;
+        line-height: 11px;
+        font-weight: 700;
+        color: @text-primary-color;
+        text-transform: uppercase;
+    }
+    &.-copyright {
+        font-family: @text-secondary-font-family;
+        font-size: 10px;
+        line-height: 18px;
+        font-weight: 400;
+        color: @text-primary-color;
+    }
+    &.-product {
+        font-family: @text-primary-font-family;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+    &.-productM {
+        font-family: @text-primary-font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 15.5px;
+        text-transform: uppercase;
+    }
+    &.-productS {
+        font-family: @text-primary-font-family;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15.5px;
+        text-transform: uppercase;
+    }
+    &.-footersmall {
+        font-family: @text-secondary-font-family;
+        color: @text-primary-color;
+        font-size: 11px;
+        line-height: 18px;
+        font-weight: 400;
+        max-width: 260px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+}
+
+@media @mobile-L {
+    .text {
+        &.-footersmall {
+            margin-bottom: 20px;
+            max-width: 380px;
+        }
+    }
 }

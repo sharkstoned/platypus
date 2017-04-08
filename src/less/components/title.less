@@ -6,59 +6,82 @@
 @title-tertiary-color: @cyan;
 
 .title {
-  & {
-    font-family: @title-primary-font-family;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
+    & {
+        font-family: @title-primary-font-family;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
 
-  //--------------SIZE---------------
+    //--------------SIZE---------------
 
-  &.-big {
-    font-size: 35px;
-    line-height: 28px;
-  }
-  &.-mediumB {
-    font-size: 33px;
-    line-height: 27px;
-  }
-  &.-mediumS {
-    font-size: 30px;
-    line-height: 25px;
-  }
-  &.-small {
-    font-size: 14px;
-    line-height: 13px;
-  }
-  &.-extrasmall {
-    font-size: 12px;
-    line-height: 11px;
-  }
+    &.-big {
+        font-size: 35px;
+        line-height: 28px;
+    }
+    &.-mediumB {
+        font-size: 33px;
+        line-height: 27px;
+    }
+    &.-mediumS {
+        font-size: 30px;
+        line-height: 25px;
+    }
+    &.-small {
+        font-size: 14px;
+        line-height: 13px;
+    }
+    &.-extrasmall {
+        font-size: 12px;
+        line-height: 11px;
+    }
 
-  //--------------COLOR---------------
+    //--------------COLOR---------------
 
-  &.-black {
-    color: @title-primary-color;
-  }
-  &.-white {
-    color: @title-secondary-color;
-  }
-  &.-cyan {
-    color: @title-tertiary-color;
-  }
+    &.-black {
+        color: @title-primary-color;
+    }
+    &.-white {
+        color: @title-secondary-color;
+    }
+    &.-cyan {
+        color: @title-tertiary-color;
+    }
 
-  //------------OTHER---------------
+    //------------OTHER---------------
 
-  &.-feature {
-    font-family: @title-secondary-font-family;
-    color: @title-tertiary-color;
-    font-size: 32px;
-    line-height: 36.93px;
-  }
-  &.-social {
-    font-family: @title-secondary-font-family;
-    color: @title-secondary-color;
-    font-size: 49.55px;
-    line-height: 12.8px;
-  }
+    &.-feature {
+        font-family: @title-secondary-font-family;
+        color: @title-tertiary-color;
+        font-size: 32px;
+        line-height: 36.93px;
+    }
+    &.-social {
+        font-family: @title-secondary-font-family;
+        color: @title-secondary-color;
+        font-size: 49.55px;
+        line-height: 50px;
+    }
+    &.-footerregular {
+        font-size: 17px;
+        line-height: 17px;
+        text-align: center;
+    }
+}
+
+@media @tablet-S {
+    .title {
+        &.-footerregular {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media @desktop-S {
+    .title {
+        &.-footerregular {
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
 }

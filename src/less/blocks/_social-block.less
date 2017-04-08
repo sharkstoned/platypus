@@ -1,0 +1,33 @@
+.social-block {
+    > .title {
+        .visually-hidden;
+        max-width: 200px;
+        text-align: center;
+    }
+    > .wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    > .wrapper > .button {
+        height: 44px;
+        width: 150px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media @mobile-L {
+    .social-block {
+        > .wrapper {
+            flex-direction: row;
+            max-width: 500px;
+
+        }
+        > .wrapper  > .button {
+            width: 30%;
+        }
+    }
+}

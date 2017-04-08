@@ -1,0 +1,17 @@
+@page-footer-primary-color: @primary-color;
+
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: @page-footer-primary-color;
+
+    > .customer-block {
+        order: 3;
+    }
+    > .subscribe-block {
+        order: 1;
+    }
+    > .social-block {
+        order: 2;
+    }
+}

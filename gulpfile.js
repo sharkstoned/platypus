@@ -60,12 +60,12 @@ gulp.task('html', function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src('build/images/**/*.{jpg, png, gif}')
-    .pipe(imagemin([
-        imagemin.optipng({optimizationLevel: 3}),
-        imagemin.jpegtran({progressive: true})
-    ]))
-  .pipe(gulp.dest('build/images'));
+    gulp.src('src/images/**/*.{jpg, png, gif}')
+        .pipe(imagemin([
+            imagemin.optipng({optimizationLevel: 3}),
+            imagemin.jpegtran({progressive: true})
+        ]))
+        .pipe(gulp.dest('build/images'));
 });
 
 // gulp.task('img-sprite', function () {

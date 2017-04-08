@@ -1,115 +1,129 @@
 @link-primary-font-family: @font-family-superGrotesk;
-@link-secondary-font-family: @font-family-proximaNova;
+@link-secondary-font-family: @font-family-proximaNovaCond;
+@link-tertiary-font-family: @font-family-openSans;
 
 @link-primary-color: @black;
 @link-secondary-color: @white;
 @link-tertiary-color: @cyan;
 
-@link-primary-color-transparent: rgba(255,255,255,0.3);
+@link-primary-color-transparent: rgba(255, 255, 255, .3);
 
 .link {
-  & {
-    font-family: @link-primary-font-family;
-    font-size: 13px;
-    line-height: 15.5px;
-    font-weight: 400;
-    text-decoration: none;
-
-    transition: all 0.15s linear;
-  }
-  // -----------FONT-SIZE------------
-  &.-regular {
-    color: @link-primary-color;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    &:hover {
-      color: @link-tertiary-color;
+    & {
+        font-family: @link-primary-font-family;
+        font-size: 13px;
+        line-height: 15.5px;
+        font-weight: 400;
+        text-decoration: none;
+        transition: all .15s linear;
     }
-  }
-  &.-big {
-    font-size: 26px;
-    line-height: 15.5px;
-  }
-  &.-medium {
-    font-size: 18px;
-    line-height: 15.5px;
-  }
-  &.-small {
-    font-size: 14px;
-    line-height: 15.5px;
-  }
-
-  // ------------OTHER-------------
-  &.-user {
-    color: @link-secondary-color;
-    > .number {
-      font-weight: 700;
+    // -----------FONT-SIZE------------
+    &.-regular {
+        color: @link-primary-color;
+        font-weight: 700;
+        text-transform: uppercase;
     }
-  }
-  &.-nav {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    color: @link-secondary-color;
-    background-color: transparent;
-    text-transform: uppercase;
-
-    &:hover {
-      background-color: @link-tertiary-color;
+    &.-big {
+        font-size: 26px;
+        line-height: 15.5px;
     }
-    // ------------TEMP--------------
-    width: 150px;
-    height: 80px;
-    > .icon {
-      border-color: @link-secondary-color;
+    &.-medium {
+        font-size: 18px;
+        line-height: 15.5px;
     }
-    //
-  }
-
-  &.-brand {
-    display: inline-flex;
-    align-items: center;
-    font-size: 0;
-    background-color: transparent;
-
-    &:hover {
-      background-color: @link-primary-color-transparent;
+    &.-small {
+        font-size: 14px;
+        line-height: 15.5px;
     }
-    // ------------TEMP--------------
-    width: 150px;
-    height: 105px;
-    //
-  }
-  &.-tip {
-    color: @cyan;
-    font-size: 13px;
-    line-height: 15.5px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: underline;
 
-    &:hover {
-      color: @link-secondary-color;
-    }
-  }
-  &.-instagram {
-    color: @link-primary-color;
-  }
-  &.-storeinfo {
-    color: @link-secondary-color;
+    // ------------OTHER-------------
+    &.-user {
+        & {
+            color: @link-secondary-color;
+        }
 
-    &:hover {
-      color: @link-tertiary-color;
-    }
-  }
-  &.-customer {
-    font-family: @link-secondary-font-family;
-    font-weight: 400;
-    color: @link-secondary-color;
+        > .number {
+            font-weight: 700;
+        }
 
-    &:hover {
-      color: @link-tertiary-color;
+        :hover {
+            color: @link-tertiary-color;
+        }
     }
-  }
+    &.-nav {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: @link-secondary-color;
+        background-color: transparent;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: @link-tertiary-color;
+        }
+        // ------------TEMP--------------
+        width: 150px;
+        height: 80px;
+        > .icon {
+            border-color: @link-secondary-color;
+        }
+        //
+    }
+
+    &.-brand {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0;
+        background-color: transparent;
+
+        &:hover {
+            background-color: @link-primary-color-transparent;
+        }
+        // ------------TEMP--------------
+        width: 150px;
+        height: 105px;
+        //
+    }
+    &.-tip {
+        color: @cyan;
+        font-size: 13px;
+        line-height: 15.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: underline;
+
+        &:hover {
+            color: @link-secondary-color;
+        }
+    }
+    &.-instagram {
+        color: @link-primary-color;
+    }
+    &.-storeinfo {
+        color: @link-secondary-color;
+
+        &:hover {
+            color: @link-tertiary-color;
+        }
+    }
+    &.-customer {
+        font-family: @link-secondary-font-family;
+        font-weight: 300;
+        color: @link-secondary-color;
+        text-transform: uppercase;
+
+        &:hover {
+            color: @link-tertiary-color;
+        }
+    }
+    &.-copyright {
+        font-family: @link-tertiary-font-family;
+        color: @link-secondary-color;
+        font-size:inherit;
+        line-height: inherit;
+        text-decoration: none;
+        &:hover {
+            color: @link-tertiary-color;
+        }
+    }
 }
