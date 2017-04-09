@@ -1,5 +1,26 @@
 .subscribe-block {
     & {
+        display: flex;
+        flex-direction: column;
         margin-bottom: 20px;
+    }
+    > .title {
+        margin-bottom: 11px;
+    }
+}
+@media @tablet-L {
+    .subscribe-block {
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+}
+@media @desktop-L {
+    .subscribe-block {
+        & {
+            justify-content: flex-start;
+        }
+        > .title {
+            margin-bottom: 20px;
+        }
     }
 }
