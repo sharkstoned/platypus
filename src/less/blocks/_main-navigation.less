@@ -1,4 +1,5 @@
 @main-navigation-primary-color: @tertiary-color;
+@main-navigation-secondary-color: @color3-1;
 
 .main-navigation {
     display: none;
@@ -7,7 +8,7 @@
         background-color: @main-navigation-primary-color;
 
         &:hover {
-            background-color: #a0d6d4;
+            background-color: @main-navigation-secondary-color;
         }
     }
 }
@@ -42,15 +43,16 @@
             margin-bottom: 0;
             margin-right: 0;
         }
-        > .link.-basket > .text {
-            .visually-hidden;
+        > .link.-basket {
+            font-size: 0;
+            line-height: 0;
         }
     }
 }
 
 @media @desktop-S and (max-width: 1439px) {
     .main-navigation {
-        > .link > .text {
+        > .link {
             font-size: 10px;
             line-height: 10px;
         }
@@ -66,7 +68,6 @@
 
 @media @desktop-L {
     .main-navigation {
-
         > .link {
             flex-direction: row;
             width: 11%;

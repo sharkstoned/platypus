@@ -1,3 +1,5 @@
+@user-block-primary-color: @tertiary-color;
+
 .user-block {
     & {
         background-image: url('../images/background/user.jpg');
@@ -10,7 +12,7 @@
     }
     > .link {
         &:hover {
-            color: @cyan;
+            color: @user-block-primary-color;
         }
         &:hover .icon {
             fill: currentColor;
@@ -24,6 +26,12 @@
     > .link > .icon.-user {
         width: 15px;
         height: 15px;
+    }
+    > .link > .number {
+        font-weight: 700;
+    }
+    > .link > .number:hover {
+        color: inherit;
     }
 }
 

@@ -24,7 +24,7 @@
         width: 108px;
         height: 21px;
     }
-    > .link > .text {
+    > .link {
         font-size: 0;
     }
 }
@@ -55,7 +55,7 @@
         > .link.-menu > .icon {
             margin-right: 10px;
         }
-        > .link > .text {
+        > .link {
             font-size: inherit;
         }
     }
@@ -80,7 +80,7 @@
 
 @media @desktop-S and (max-width: 1439px) {
     .menu-block {
-        > .link > .text {
+        > .link {
             font-size: 10px;
             line-height: 10px;
         }
@@ -93,6 +93,9 @@
 
 @media @desktop-L {
     .menu-block {
+        > .link {
+            font-size: 13px;
+        }
         > .link.-menu {
             flex-direction: row;
             width: 11%;

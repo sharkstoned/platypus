@@ -1,0 +1,23 @@
+@breadcrumbs-navigation-primary-color: @primary-color;
+
+.breadcrumbs-navigation {
+    > .link {
+        white-space: nowrap;
+    }
+    > .link::after {
+        content: ' /';
+    }
+    > .link:hover::after {
+        color: @breadcrumbs-navigation-primary-color;
+    }
+    > .link:last-child::after {
+        content: '';
+    }
+}
+@media @desktop-S {
+    .breadcrumbs-navigation {
+        & {
+            padding: 20px 0 20px 25px;
+        }
+    }
+}

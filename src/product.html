@@ -41,7 +41,7 @@
                 <svg class="icon -nav -white">
                     <use xlink:href="#burger"></use>
                 </svg>
-                <span class="text -nav">Menu</span>
+                <span>Menu</span>
             </a>
 
             <nav class="main-navigation">
@@ -50,28 +50,28 @@
                     <svg class="icon -nav -white">
                         <use xlink:href="#mark"></use>
                     </svg>
-                    <span class="text -nav">Store locator</span>
+                    <span>Store locator</span>
                 </a>
 
                 <a class="link -nav" href="#">
                     <svg class="icon -nav -white">
                         <use xlink:href="#search"></use>
                     </svg>
-                    <span class="text -nav">Search</span>
+                    <span>Search</span>
                 </a>
 
-                <a class="link -nav -list" href="#">
+                <a class="link -nav" href="#">
                     <svg class="icon -nav -white">
                         <use xlink:href="#star"></use>
                     </svg>
-                    <span class="text -nav">List</span>
+                    <span>List</span>
                 </a>
 
                 <a class="link -nav -basket" href="#">
                     <svg class="icon -nav -white">
                         <use xlink:href="#basket"></use>
                     </svg>
-                    <span class="text -nav">Basket</span>
+                    <span>Basket</span>
                 </a>
 
             </nav>
@@ -91,8 +91,32 @@
     </header>
 
     <main class="page-main">
-        <span class="breadcrumbs">
-        </span>
+
+        <div class="breadcrumbs-navigation text -breadcrumbs">
+            <a href="index.html" class="link -nostyle">Home</a>
+            <a href="#" class="link -nostyle">Men's shoes</a>
+            <a href="#" class="link -nostyle">Low-tops</a>
+            <a href="#" class="link -nostyle">Nike men's Juvenate</a>
+        </div>
+
+        <section class="product-preview">
+            <div class="slider"></div>
+            <div class="product-controls">
+                <input class="input" id="prod-ctrl-1" type="radio" name="product-control" checked>
+                <input class="input" id="prod-ctrl-2" type="radio" name="product-control">
+                <input class="input" id="prod-ctrl-3" type="radio" name="product-control">
+
+                <label for="prod-ctrl-1" class="title">Features</label>
+                <label for="prod-ctrl-2" class="title">Trending</label>
+                <label for="prod-ctrl-3" class="title">Reviews</label>
+            </div>
+            <div class="product-tab -features">
+                <div class="product-details">
+                    <span class="title">Product details</span>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="page-footer">
@@ -177,7 +201,7 @@
 </div>
 
 </body>
-<script>
+<script type="text/javascript">
     'use strict'
     let svg = document.createElement('div');
     svg.innerHTML = SVG_SPRITE;
