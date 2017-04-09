@@ -1,12 +1,12 @@
 @btn-primary-font-family: @font-family-superGrotesk;
 @btn-secondary-font-family: @font-family-proximaNovaCond;
 
-@btn-primary-color: @black;
-@btn-secondary-color: @white;
-@btn-tertiary-color: @cyan;
+@btn-primary-color: @primary-color;
+@btn-secondary-color: @secondary-color;
+@btn-tertiary-color: @tertiary-color;
 
-@btn-grey-light: #e6e6e6;
-@btn-grey-dark: #1a1a1a;
+@btn-grey-light: @color2-1;
+@btn-grey-dark: @color1-1;
 
 .button {
     & {
@@ -15,15 +15,13 @@
         align-items: center;
         box-sizing: border-box;
         border: 2px solid;
-
         font-family: @btn-primary-font-family;
         font-weight: 700;
         text-decoration: none;
         text-transform: uppercase;
         text-align: center;
-
         background-color: transparent;
-        transition: all 0.15s linear;
+        transition: all .15s linear;
         cursor: pointer;
     }
 
@@ -78,12 +76,10 @@
 
     &.-social {
         border: none;
-
         font-family: @btn-secondary-font-family;
         font-size: 14px;
         line-height: 22px;
         font-weight: 300;
-
         background-color: @btn-grey-dark;
         color: @btn-secondary-color;
 
@@ -92,7 +88,7 @@
             color: @btn-primary-color;
         }
         &:hover .icon.-socialbtn {
-            fill: @btn-primary-color
+            fill: @btn-primary-color;
         }
     }
     &.-nostyle {

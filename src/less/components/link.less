@@ -2,11 +2,11 @@
 @link-secondary-font-family: @font-family-proximaNovaCond;
 @link-tertiary-font-family: @font-family-openSans;
 
-@link-primary-color: @black;
-@link-secondary-color: @white;
-@link-tertiary-color: @cyan;
+@link-primary-color: @primary-color;
+@link-secondary-color: @secondary-color;
+@link-tertiary-color: @tertiary-color;
 
-@link-primary-color-transparent: rgba(255, 255, 255, .3);
+@link-primary-color-transparent: @color1-2;
 
 .link {
     & {
@@ -119,7 +119,7 @@
     &.-copyright {
         font-family: @link-tertiary-font-family;
         color: @link-secondary-color;
-        font-size:inherit;
+        font-size: inherit;
         line-height: inherit;
         text-decoration: none;
         &:hover {
