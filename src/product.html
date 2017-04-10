@@ -71,14 +71,16 @@
                     <svg class="icon -nav -white">
                         <use xlink:href="#basket"></use>
                     </svg>
-                    <span>Basket</span>
+                    <span>Cart</span>
                 </a>
 
             </nav>
 
             <div class="search-form">
                 <form class="form" action="#" method="GET">
-                    <input class="input" type="text" placeholder="Search">
+                    <label class="wrapper">Search
+                        <input class="field" type="search" placeholder="Search">
+                    </label>
                     <button class="button -nostyle" type="submit">
                         <svg class="icon -search">
                             <use xlink:href="#search"></use>
@@ -100,6 +102,7 @@
         </div>
 
         <section class="product-information">
+            
             <div class="slider"></div>
             <div class="product-controls">
                 <input class="input" id="prod-ctrl-1" type="radio" name="product-control" checked>
@@ -110,7 +113,9 @@
                 <label for="prod-ctrl-2" class="title">Trending</label>
                 <label for="prod-ctrl-3" class="title">Reviews</label>
             </div>
+
             <div class="product-tab -features">
+
                 <div class="details">
                     <h2 class="title">Product details</h2>
                     <p class="text">
@@ -123,13 +128,17 @@
                         <span>Item Number: 747108-600</span>
                     </p>
                 </div>
+
                 <div class="description">
                     <p class="text">The Nike Men's Juvenate feature a fully collapsible sports mesh upper which is ideal for packing into your gym bag or for when you need to pack light for a weekend away.</p>
                     <p class="text">The no-tounge, sock like design offers supreme comfort while the full length midsole adds durability.</p>
                     <p class="text">Available in a range of colours.</p>
                 </div>
+
             </div>
+
             <div class="product-tab -trending">
+
                 <span class="text">Share your sneakers stories with us by using the #PLATYPUSSHOES hashtag</span>
                 <div class="slider"></div>
                 <span class="text">
@@ -138,11 +147,14 @@
                         <use xlink:href="#"></use>
                     </svg>
                 </span>
+
             </div>
+
             <div class="product-tab -reviews">
+
                 <div class="reviews-read">
                     <h2 class="title">Customer reviews</h2>
-                    <span class="quantity">Displaying 18 Reviews</span>
+                    <span class="quantity">Displaying <span>18</span> Reviews</span>
                     <div class="frame">
                         <article class="product-review">
                             <span class="date">Review date: 1/1/2016</span>
@@ -165,41 +177,204 @@
                     <h2>Write your own review</h2>
                     <form action="#" method="POST">
                         <div class="rating"></div>
-                        <input type="text" name="nickname" placeholder="Nickname">
-                        <input type="text" name="tilte" placeholder="Title">
+                        <label class="wrapper">Nickname
+                            <input class="field" type="text" name="nickname" placeholder="Nickname">
+                        </label>
+                        <label class="wrapper">Title
+                            <input class="field" type="text" name="tilte" placeholder="Title">
+                        </label>
                         <textarea name="content" placeholder="Reviews"></textarea>
                         <button class="button" type="submit">Submit review</button>
                     </form>
                 </div>
+
             </div>
+
+            <div class="trust-block">
+                <div class="feature-item">
+                    <svg class="icon -feature -cyan">
+                        <use xlink:href="#free"></use>
+                    </svg>
+                    <span class="title -feature">Free shipping</span>
+                    <span class="text -feature">on orders over $50</span>
+                    <span class="text">Free shipping within Australia for orders over AUD$50. Orders under AUD$50 will incur a flat shipping charge of AUD$10.</span>
+                </div>
+                <div class="feature-item">
+                    <svg class="icon -feature -cyan">
+                        <use xlink:href="#car"></use>
+                    </svg>
+                    <span class="title -feature">Fast delivery</span>
+                    <span class="text -feature">Australia wide</span>
+                    <span class="text">Please allow up to 3 business days for deliveries to metro cities and up to 7 days for deliveries to rural areas. Please note: we do not ship to PO Box addresses.</span>
+                </div>
+                <div class="feature-item">
+                    <svg class="icon -feature -cyan">
+                        <use xlink:href="#"></use>
+                    </svg>
+                    <span class="title -feature">Easy returns</span>
+                    <span class="text -feature">Satisfaction guarantee</span>
+                    <span class="text">If you're not 100% satisfied with your online purchase, you can return your purchase within 30 days of the order receipt and we will be happy to provide you with a refund.</span>
+                </div>
+            </div>
+
         </section>
 
-        <div class="trust-block">
-            <div class="feature-item">
-                <svg class="icon -feature -cyan">
-                    <use xlink:href="#free"></use>
-                </svg>
-                <span class="title -feature">Free shipping</span>
-                <span class="text -feature">on orders over $50</span>
-                <span class="text">Free shipping within Australia for orders over AUD$50. Orders under AUD$50 will incur a flat shipping charge of AUD$10.</span>
+        <section class="purchase-options">
+            <form class="form" action="#" method="POST">
+
+                <a href="#">Nike</a>
+                <h1 class="title">Men's Juvenate</h1>
+                <span class="color">Red / Black</span>
+                <span class="prise">$130</span>
+                <span class="shipping">This product qualifies for free shipping</span>
+                <div class="rating"></div>
+                <a href="#">Reviews <span>(21)</span></a>
+
+                <div class="picker -colour">
+                    <span>Colour: <span>(5)</span></span>
+                    <img class="item -checked" src="#" alt="Red">
+                    <img class="item" src="#" alt="Blue">
+                    <img class="item" src="#" alt="">
+                    <img class="item" src="#" alt="">
+                    <img class="item" src="#" alt="">
+                </div>
+
+                <div class="picker -size">
+                    <span>Size: </span>
+                    <button>
+                        <a href="#">
+                            <span>US Mens</span>
+                            <svg class="icon -cyan">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </a>
+                    </button>
+                    <span class="item">8</span>
+                    <span class="item">9</span>
+                    <span class="item">10</span>
+                    <span class="item -checked">11</span>
+                </div>
+
+                <span><a href="#">View Size Chart</a><span>Availability: <span>In-Stock</span></span></span>
+
+                <div class="receiving-type">
+                    <label class="wrapper">
+                        <span>Delivery</span>
+                        <input class="field" type="radio" name="receiving-type" value="delivery">
+                    </label>
+                    <label class="wrapper">
+                        <span>Click & Collect</span>
+                        <input class="field" type="radio" name="receiving-type" value="click-and-collect">
+                        <svg>
+                            <use xlink:href="#"></use>
+                        </svg>
+                    </label>
+                </div>
+
+                <button class="button -cyan" type="submit">Add to Cart</button>
+
+            </form>
+            
+            <div class="">
+                <a href="#">Add to Wishlist</a>
+                <a href="#">Share</a>
             </div>
-            <div class="feature-item">
-                <svg class="icon -feature -cyan">
-                    <use xlink:href="#car"></use>
-                </svg>
-                <span class="title -feature">Fast delivery</span>
-                <span class="text -feature">Australia wide</span>
-                <span class="text">Please allow up to 3 business days for deliveries to metro cities and up to 7 days for deliveries to rural areas. Please note: we do not ship to PO Box addresses.</span>
+            
+            <div class="about-manufacturer">
+                <img src="#" alt="Nike">
+                <p class="">If you have a body, you are an athlete,' is Nike's mantra. We agree. Which is why we take the fitting of every foot – whether it belongs to a world-class runner, or a weekend walker equally seriously. Nike is the world's largest manufacturer of sports shoes.</p>
             </div>
-            <div class="feature-item">
-                <svg class="icon -feature -cyan">
-                    <use xlink:href="#"></use>
-                </svg>
-                <span class="title -feature">Easy returns</span>
-                <span class="text -feature">Satisfaction guarantee</span>
-                <span class="text">If you're not 100% satisfied with your online purchase, you can return your purchase within 30 days of the order receipt and we will be happy to provide you with a refund.</span>
+            
+        </section>
+        
+        <section class="suggestions-block">
+
+            <h2 class="title">You may also like</h2>
+
+            <div class="product-container">
+
+                <article class="product-card">
+                    <a href="#" class="link"><img src="#" alt=""></a>
+                    <div class="variations">
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                    </div>
+                    <div class="description">
+                        <span class="text -product">Nike</span>
+                        <a class="link -regular -big" href="#">Men's Internationalist</a>
+                        <span class="text -product">$120</span>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="#" class="link"><img src="#" alt=""></a>
+                    <div class="variations">
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                    </div>
+                    <div class="description">
+                        <span class="text -product">Nike</span>
+                        <a class="link -regular -big" href="#">Men's ZX Flux Techfit</a>
+                        <span class="text -product">$130 <span class="discount">$99</span></span>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="#" class="link"><img src="#" alt=""></a>
+                    <div class="variations">
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                    </div>
+                    <div class="description">
+                        <span class="text -product">Nike</span>
+                        <a class="link -regular -big" href="#">Men's Roshe One Breeze</a>
+                        <span class="text -product">$120</span>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="#" class="link"><img src="#" alt=""></a>
+                    <div class="variations">
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                    </div>
+                    <div class="description">
+                        <span class="text -product">Nike</span>
+                        <a class="link -regular -big" href="#">Men's Roshe One Breeze</a>
+                        <span class="text -product">$120</span>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="#" class="link"><img src="#" alt=""></a>
+                    <div class="variations">
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                        <a href="#" class="link"><img src="#" alt=""></a>
+                    </div>
+                    <div class="description">
+                        <span class="text -product">Nike</span>
+                        <a class="link -regular -big" href="#">Men's Roshe One Breeze</a>
+                        <span class="text -product">$120</span>
+                    </div>
+                </article>
+
             </div>
-        </div>
+
+             <div class="viewall">
+                 <a href="#">View all <span>Nike</span></a>
+                 <a href="#">View all <span>low tops</span></a>
+             </div>
+
+        </section>
+
 
     </main>
 
@@ -240,10 +415,13 @@
 
         <div class="subscribe-block">
             <h3 class="title -footerregular -white">Get offers direct to you!</h3>
-            <p class="text -footersmall">Sign up to receive must-have news, updates, and promotions before anyone else.</p>
+            <p class="text -footersmall">Sign up to receive must-have news, updates, and promotions before anyone
+                else.</p>
             <div class="subscribe-form">
                 <form class="form" action="#" method="POST">
-                    <input class="input" type="text" placeholder="Enter your email address for updates">
+                    <label class="wrapper">Subscribe
+                        <input class="field" type="text" placeholder="Enter your email address for updates">
+                    </label>
                     <button class="button -medium -white" type="submit">Sign up</button>
                 </form>
             </div>
